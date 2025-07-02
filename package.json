@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Automation github deployment with AI",
   "main": "bin/cli.js",
+  "files": [
+    "bin/"
+  ],
   "bin": {
     "auxy": "./bin/cli.js"
   },
