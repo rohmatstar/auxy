@@ -23,6 +23,7 @@
   "author": "rohmatstar",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^3.3.2",
     "simple-git": "^3.19.1"
   },
   "publishConfig": {
