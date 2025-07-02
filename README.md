@@ -1,3 +1,3 @@
 # Auxy
 
-Automation github deployment with AI
+Automation github deployment with Artificial Intelligence
