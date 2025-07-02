@@ -22,7 +22,8 @@ const msgParts = args.slice(1);
 
 function checkOllamaExists() {
   try {
-    execSync("which ollama", { stdio: "ignore" });
+    const cmd = process.platform === "win32" ? "where ollama" : "which ollama";
+    execSync(cmd, { stdio: "ignore" });
     return true;
   } catch {
     console.warn(
