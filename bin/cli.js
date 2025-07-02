@@ -26,6 +26,7 @@ function checkOllamaExists() {
     execSync(cmd, { stdio: "ignore" });
     return true;
   } catch {
+    console.log("platform", process.platform);
     console.warn(
       `
 ⚠️  Ollama tidak ditemukan di sistem Anda.
