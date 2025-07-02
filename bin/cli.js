@@ -22,9 +22,18 @@ const msgParts = args.slice(1);
 
 function checkOllamaExists() {
   try {
-    const cmd = process.platform === "win32" ? "where ollama" : "which ollama";
-    execSync(cmd, { stdio: "ignore" });
-    return true;
+    const possibleNames =
+      process.platform === "win32" ? ["ollama.exe"] : ["ollama"];
+    const pathDirs = process.env.PATH.split(path.delimiter);
+
+    for (const dir of pathDirs) {
+      for (const name of possibleNames) {
+        const fullPath = path.join(dir, name);
+        if (fs.existsSync(fullPath)) {
+          return true;
+        }
+      }
+    }
   } catch {
     console.log("platform", process.platform);
     console.warn(
