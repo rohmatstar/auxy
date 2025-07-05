@@ -84,8 +84,8 @@ function getGitDiffCached(limit = 3000) {
 }
 
 async function getAIMessage(diffText, files) {
-  const prompt = `
-Buat commit message singkat, bermakna, dan sesuai format conventional commit.
+  const prompt =
+    `Buat commit message singkat, bermakna, dan sesuai format conventional commit.
 File yang diubah: ${files.join(", ")}
 
 Isi perubahan kode (terbatas 3000 karakter):
