@@ -104,7 +104,7 @@ ${diffText}
 
 (async () => {
   let type = validTypes.includes(inputType) ? inputType : null;
-  if (type === "major") type = "BREAKING CHANGE";
+  if (type === "major") type = "feat: Major Changes\n\nBREAKING CHANGE";
 
   try {
     console.log("🔄 Fetching & pulling...");
