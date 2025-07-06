@@ -52,6 +52,10 @@ process.removeAllListeners("warning");
     await git.commit(finalMessage);
     await git.push();
 
+    console.log("🔄 Fetching & pulling latest changes...");
+    await git.fetch();
+    await git.pull();
+
     console.log("🚀 Done!");
   } catch (err) {
     console.error("❌ Error:", err.message);
