@@ -1,6 +1,6 @@
 {
   "name": "auxy",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Automation github deployment with AI",
   "main": "bin/cli.js",
   "files": [
