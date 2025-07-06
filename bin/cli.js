@@ -9,6 +9,8 @@ const msgParts = args.slice(1);
 
 process.removeAllListeners("warning");
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 (async () => {
   let type = inputType;
   if (type === "major") type = "feat: Major Changes\n\nBREAKING CHANGE";
@@ -51,6 +53,9 @@ process.removeAllListeners("warning");
     console.log(`✅ Comitting: "${finalMessage}"`);
     await git.commit(finalMessage);
     await git.push();
+
+    console.log("⏸️ Prepare to get latest changes...");
+    await sleep(5000); // 5s
 
     console.log("🔄 Fetching & pulling latest changes...");
     await git.fetch();
