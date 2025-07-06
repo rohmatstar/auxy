@@ -22,11 +22,11 @@ process.removeAllListeners("warning");
     const changedFiles = status.files.map((f) => f.path);
 
     if (changedFiles.length === 0) {
-      console.log("✅ Tidak ada perubahan untuk di-commit.");
+      console.log("✅ There is no changes to commit!");
       return;
     }
 
-    console.log("➕ Menambahkan file...");
+    console.log("➕ Adding all files...");
     await git.add("./*");
 
     // Auto detect type
