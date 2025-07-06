@@ -55,7 +55,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     await git.push();
 
     console.log("⏸️ Prepare to get latest changes...");
-    await sleep(5000); // 5s
+    await sleep(10000); // 10s
 
     console.log("🔄 Fetching & pulling latest changes...");
     await git.fetch();
